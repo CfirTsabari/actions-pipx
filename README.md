@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: 3.9
       - name: Run image
-        uses: CfirTsabari/actions-pipx@v0.0.1
+        uses: CfirTsabari/actions-pipx@v1
       - name: Run something using pipx
         run: pipx run pycowsay
 ```
