@@ -1,0 +1,16 @@
+name: "Python pipx Action"
+author: "@CfirTsabari"
+description: "An action to run https://github.com/pypa/pipx"
+branding:
+  icon: "x"
+  color: "green"
+inputs:
+  pipx-version:
+    description: "The version of pipx to install"
+    required: true
+    default: "1.0.0"
+runs:
+  using: "composite"
+  steps:
+    - run: pip install pipx==${{ inputs.pipx-version }}
+      shell: bash
