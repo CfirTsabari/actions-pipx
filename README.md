@@ -1,5 +1,5 @@
 # actions-pipx
-GitHub Actions for Python projects using poetry
+GitHub Actions for using pipx
 
 [![license](https://img.shields.io/github/license/CfirTsabari/actions-pipx.svg)](https://github.com/CfirTsabari/actions-pipx/blob/master/LICENSE)
 [![release](https://img.shields.io/github/release/CfirTsabari/actions-pipx.svg)](https://github.com/CfirTsabari/actions-pipx/releases/latest)
