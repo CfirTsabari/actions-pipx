@@ -1,0 +1,19 @@
+name: Release
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test-action:
+    uses: ./.github/workflows/test_action.yml
+  release:
+    if: github.event_name == 'push'
+    needs: test-action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
