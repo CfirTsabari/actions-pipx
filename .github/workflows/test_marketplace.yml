@@ -1,0 +1,19 @@
+name: Test action marketplace
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - chore/marketplace
+jobs:
+  run:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Install pipx
+        uses: CfirTsabari/actions-pipx@v1
+      - name: View pipx --help
+        run: pipx --help
+      - name: check pipx is in path
+        run: pipx ensurepath
+      - name: run pycowsay
+        run: pipx run pycowsay
+  
